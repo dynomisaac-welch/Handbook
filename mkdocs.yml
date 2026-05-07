@@ -1,0 +1,23 @@
+site_name: Condado Handbook
+theme:
+  name: material
+  palette:
+    primary: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Company:
+    - Mission & Values: company/values.md
+    - How We Work: company/how-we-work.md
+  - Delivery:
+    - Project Lifecycle: delivery/project-lifecycle.md
+    - Status Reporting: delivery/status-reporting.md
+  - Clients:
+    - Communication Standards: clients/communication.md
+  - Engineering:
+    - Code Review: engineering/code-review.md
