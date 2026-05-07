@@ -1,17 +1,12 @@
-# Welcome to MkDocs
+# Condado Handbook
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to the Condado team handbook. Use the navigation above or the links below to find what you need.
 
-## Commands
+## Sections
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- [Mission & Values](company/values.md) — Who we are and what we stand for
+- [How We Work](company/how-we-work.md) — Our operating principles and team norms
+- [Project Lifecycle](delivery/project-lifecycle.md) — How we run projects from kickoff to close
+- [Status Reporting](delivery/status-reporting.md) — How we communicate project status
+- [Communication Standards](clients/communication.md) — How we communicate with clients
+- [Code Review](engineering/code-review.md) — Engineering standards for code review
