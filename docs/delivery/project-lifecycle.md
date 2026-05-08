@@ -27,6 +27,16 @@ What the DM does immediately after:
 
 **The client introduction email goes out within 48 hours of handoff completion.**
 
+### Deliverables
+
+**Required**
+- Completed handoff checklist confirming DM received all inputs
+- Project infrastructure live (ADO, Notion, Slack, shared drives)
+- Client introduction email sent within 48 hours
+
+**Optional**
+- Handoff memo — use when the engagement carries unusual complexity, political risk, or prior client history that warrants a written summary beyond the checklist
+
 ---
 
 ## Phase 1: Intake & Kickoff
@@ -49,6 +59,18 @@ The first formal meeting with client stakeholders. Agenda covers:
 
 ### Phase 1 Exit: Project Canvas
 The Project Canvas is a single-page overview of the engagement — objectives, scope, timeline, budget, risks, communication plan, and Definition of Done. **Client sign-off on the Project Canvas is the gate out of Phase 1.** Don't proceed without it.
+
+### Deliverables
+
+**Required**
+- Project Canvas — client sign-off gates exit from this phase
+- Initial risk register — top risks identified with owners
+
+**Optional**
+- RACI matrix — use when the engagement has multiple client stakeholders or ambiguous decision authority
+- Communication plan — use when the client has formal reporting requirements or distinct audience tiers (executive vs. working team)
+- Sprint 0 plan — use when proceeding to a discovery phase
+- Sprint 1 plan — use when proceeding directly to build
 
 ---
 
@@ -73,6 +95,21 @@ Client involvement is high during discovery — typically 2–3 working sessions
 - Technical architecture documented and validated
 - Definition of Ready and Definition of Done established
 - Client sign-off obtained before build begins
+
+### Deliverables
+
+**Required**
+- Product backlog — minimum 2 sprints Ready, 4+ sprints groomed, with acceptance criteria
+- Product roadmap with release milestones
+- Technical architecture document
+- Definition of Ready and Definition of Done
+- Client sign-off on discovery artifacts — gates transition to build
+
+**Optional**
+- Story map or epic breakdown — use when backlog complexity warrants visual structure for client alignment
+- Data models and API specifications — use when integration depth requires formal documentation
+- Wireframes or design comps — use when UI/UX decisions need client validation before build begins
+- Updated Project Canvas — use if scope changed materially during discovery
 
 ---
 
@@ -110,6 +147,19 @@ Escalate to Portfolio Manager when any of these are hit:
 ### Weekly Status Report
 Every Friday, the client receives a written status update covering: sprint accomplishments, next sprint plan, budget burn vs. plan, velocity trend, backlog health, top risks, and decisions needed. This is non-negotiable — it's the primary artifact of project transparency.
 
+### Deliverables
+
+**Required**
+- Weekly status report — every Friday, non-negotiable
+- Updated risk register — weekly, top 3 risks visible with owners
+- Signed change orders — required before work begins on any approved scope change
+- Build completion sign-off — all committed stories accepted by client, documentation complete, known issues logged with severity
+
+**Optional**
+- Monthly health check summary — use on engagements running 3+ months; reviewed with Portfolio Manager covering budget burn, margin, and velocity forecast
+- Release notes — use when the client requires formal documentation of each production deployment
+- Sprint demo script — use for high-stakes demos or executive-level audiences
+
 ---
 
 ## Phase 4: Closeout & Hypercare
@@ -139,6 +189,21 @@ The 2–4 weeks immediately after launch. The delivery team stays on with enhanc
 - Final financial reconciliation (budget vs. actual, margin analysis)
 - Team capacity released
 - Wins recognized
+
+### Deliverables
+
+**Required**
+- Signed pre-launch checklist — gates production deployment
+- Final acceptance sign-off — client sign-off on all committed deliverables
+- Post-mortem report — internal, completed before engagement closes
+- Lessons learned document — logged for organizational reference
+- Financial closeout report — budget vs. actual, margin analysis
+
+**Optional**
+- Launch report — use for significant or public launches where the client needs a formal record of go-live metrics and outcomes
+- Hypercare summary report — use when transitioning to a maintenance team or when hypercare exceeded standard duration
+- Transition/handoff package — required only if moving to a maintenance team; includes architecture documentation, access credentials, SLA definitions, support runbook, escalation procedures, and contact list
+- Final product backlog state — use when remaining work or technical debt is being handed to another team or back to the client
 
 ---
 
