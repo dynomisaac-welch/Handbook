@@ -21,3 +21,8 @@ nav:
     - Communication Standards: clients/communication.md
   - Engineering:
     - Code Review: engineering/code-review.md
+    - Requirements & Work Items: engineering/requirements.md
+    - Coding Standards: engineering/coding-standards.md
+    - Frontend Standards: engineering/frontend-standards.md
+    - Database Standards: engineering/database-standards.md
+    - Source Control: engineering/source-control.md
