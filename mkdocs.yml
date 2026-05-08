@@ -1,11 +1,6 @@
 site_name: Condado Handbook
-extra_css:
-  - stylesheets/extra.css
 theme:
   name: material
-  palette:
-    primary: custom
-    accent: custom
   features:
     - navigation.tabs
     - navigation.sections
