@@ -3,7 +3,7 @@
 ## Playbook — What I expect from every project manager
 
 **Owner:** Isaac Welch, VP of Delivery
-**Last updated:** May 7, 2026
+**Last updated:** May 8, 2026
 **Audience:** All project managers
 
 ---
@@ -30,6 +30,9 @@ The five standards below answer one question: how do we deliver software for cli
 - The PROJECTS database always reflects current state — health (Green / Yellow / Red), % complete, % timeline burned, current sprint, top risks.
 - If health changes from green to yellow or yellow to red, I get a Teams message within 24 hours of the change. Don't wait for the weekly update.
 - "We thought we'd catch up next sprint" is not a status update. If you're behind, say it the day you know.
+- Track 3-5 leading indicators per project — metrics that predict delivery health, not just confirm it after the fact. Velocity trends, blocked item count, and acceptance rate are more useful than % complete alone.
+- Metrics are for the team, not just leadership. If the team can't see the numbers, the numbers won't change behavior.
+- Act on variance immediately. A metric that doesn't change a decision isn't worth tracking.
 
 **Examples:**
 
@@ -47,6 +50,8 @@ The five standards below answer one question: how do we deliver software for cli
 - New deliverable → SharePoint, in the right client folder (`/Clients/[Client]/[Project]/`).
 - New work item → ADO, sized, labeled.
 - Decision made → captured in the project's NOTES or in the relevant meeting record. If it's worth remembering, it's worth writing down.
+- Every action item has one owner — not a team, not "we." Ambiguous ownership means it won't get done.
+- Blockers are cleared within 24 hours or escalated. Nothing sits. If it's in your way, name it and move it.
 
 **Examples:**
 
@@ -63,6 +68,9 @@ The five standards below answer one question: how do we deliver software for cli
 - Every meeting has a recap within 24 hours: decisions, action items, owners, due dates.
 - Bad news is delivered before the client asks. Always with the plan.
 - Pushback is part of the job. If a client decision puts the engagement at risk, surface it directly — not in a passive footnote.
+- Map stakeholders by influence and interest at project start. Not every stakeholder needs the same update — tailor format and frequency to their role.
+- Treat disengaged stakeholders as a risk. If a key decision-maker goes quiet, that is a problem to solve, not a gift.
+- Deliver incrementally where the engagement allows. Don't hold value until the end. Early wins build trust; surprises at delivery erode it.
 
 **Examples:**
 
@@ -79,6 +87,9 @@ The five standards below answer one question: how do we deliver software for cli
 - Scope changes are documented. Use the scope change memo template. Quantify impact (effort, timeline, budget). Get a written decision before any work starts.
 - "Can we just add…" gets a process, not a yes. Even small additions go through the memo. Pattern recognition matters.
 - Risks are surfaced with options, not as problems. Bring the trade-off, not the panic.
+- Distinguish between risk (known unknowns you can plan for) and ambiguity (unknown unknowns requiring exploratory action). They require different responses — don't treat them the same way.
+- Build schedule and budget contingency explicitly. Hidden padding is not a risk strategy; it just delays the conversation.
+- Run a pre-mortem at the start of every high-stakes phase. Ask: "if this phase fails, what killed it?" Surface assumptions before they become failures.
 
 **Examples:**
 
@@ -95,6 +106,11 @@ The five standards below answer one question: how do we deliver software for cli
 - Definition of Done is applied consistently. Code reviewed, tested, deployed, demoed, documented.
 - Margins reviewed monthly via ATP export and the KPI report. PM owns the conversation if a project is below margin target.
 - Engagements end cleanly. Final deliverable, retrospective, lessons learned in NOTES, formal handoff or closeout.
+- Establish team norms, decision rights, and escalation paths at kickoff — not after the first conflict. Teams that know how they work together outperform teams that figure it out under pressure.
+- Create psychological safety. Teams that surface problems early outperform teams that hide them. If your team is only bringing you good news, something is wrong.
+- Match authority to accountability. Don't hold people responsible for outcomes they can't influence.
+- Choose delivery methodology — waterfall, agile, or hybrid — based on requirements stability and delivery risk, not habit or client preference. Get stakeholder alignment on the approach before work begins. Revisit it at phase transitions.
+- Plan to the level of detail you can actually defend. Use rolling wave planning: detail the near term, keep the horizon directional. A plan that never changes isn't being used.
 
 ---
 
