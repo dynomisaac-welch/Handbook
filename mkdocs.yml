@@ -5,6 +5,7 @@ theme:
   name: material
   palette:
     primary: custom
+    accent: custom
   features:
     - navigation.tabs
     - navigation.sections
