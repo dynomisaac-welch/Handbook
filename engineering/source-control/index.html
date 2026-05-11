@@ -1,0 +1,1672 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../database-standards/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Source Control - Condado Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#source-control" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Condado Handbook" class="md-header__button md-logo" aria-label="Condado Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Condado Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Source Control
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../company/values/" class="md-tabs__link">
+          
+  
+  
+  Company
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../delivery/project-lifecycle/" class="md-tabs__link">
+          
+  
+  
+  Delivery
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../clients/communication/" class="md-tabs__link">
+          
+  
+  
+  Clients
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../code-review/" class="md-tabs__link">
+          
+  
+  
+  Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Condado Handbook" class="md-nav__button md-logo" aria-label="Condado Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Condado Handbook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Company
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Company
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mission & Values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/how-we-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How We Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../delivery/project-lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../delivery/status-reporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clients
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clients
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clients/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Engineering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Engineering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements & Work Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coding-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source Control
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-branching-strategy-scm-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Branching Strategy [SCM-BRANCH]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Branching Strategy [SCM-BRANCH]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-branch-structure-scm-branch-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Branch Structure [SCM-BRANCH-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-branch-naming-scm-branch-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Branch Naming [SCM-BRANCH-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-branch-lifetime-scm-branch-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Branch Lifetime [SCM-BRANCH-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-commit-standards-scm-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Commit Standards [SCM-COMMIT]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Commit Standards [SCM-COMMIT]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-commit-often-scm-commit-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Commit Often [SCM-COMMIT-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-commit-message-format-scm-commit-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Commit Message Format [SCM-COMMIT-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-commit-message-rules-scm-commit-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Commit Message Rules [SCM-COMMIT-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-dont-commit-scm-commit-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Don't Commit [SCM-COMMIT-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-pull-requests-scm-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Pull Requests [SCM-PR]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Pull Requests [SCM-PR]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-pr-size-scm-pr-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 PR Size [SCM-PR-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-pr-process-scm-pr-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 PR Process [SCM-PR-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ci-requirements-scm-pr-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 CI Requirements [SCM-PR-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-merge-strategy-scm-pr-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Merge Strategy [SCM-PR-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-protected-branches-scm-protect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Protected Branches [SCM-PROTECT]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Protected Branches [SCM-PROTECT]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-main-branch-rules-scm-protect-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Main Branch Rules [SCM-PROTECT-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-hotfix-exception-scm-protect-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Hotfix Exception [SCM-PROTECT-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-repository-setup-scm-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Repository Setup [SCM-REPO]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Repository Setup [SCM-REPO]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-every-repository-includes-scm-repo-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Every Repository Includes [SCM-REPO-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-secrets-and-environment-config-scm-repo-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Secrets and Environment Config [SCM-REPO-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-branching-strategy-scm-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Branching Strategy [SCM-BRANCH]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Branching Strategy [SCM-BRANCH]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-branch-structure-scm-branch-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Branch Structure [SCM-BRANCH-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-branch-naming-scm-branch-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Branch Naming [SCM-BRANCH-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-branch-lifetime-scm-branch-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Branch Lifetime [SCM-BRANCH-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-commit-standards-scm-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Commit Standards [SCM-COMMIT]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Commit Standards [SCM-COMMIT]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-commit-often-scm-commit-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Commit Often [SCM-COMMIT-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-commit-message-format-scm-commit-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Commit Message Format [SCM-COMMIT-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-commit-message-rules-scm-commit-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Commit Message Rules [SCM-COMMIT-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-dont-commit-scm-commit-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Don't Commit [SCM-COMMIT-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-pull-requests-scm-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Pull Requests [SCM-PR]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Pull Requests [SCM-PR]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-pr-size-scm-pr-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 PR Size [SCM-PR-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-pr-process-scm-pr-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 PR Process [SCM-PR-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ci-requirements-scm-pr-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 CI Requirements [SCM-PR-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-merge-strategy-scm-pr-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Merge Strategy [SCM-PR-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-protected-branches-scm-protect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Protected Branches [SCM-PROTECT]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Protected Branches [SCM-PROTECT]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-main-branch-rules-scm-protect-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Main Branch Rules [SCM-PROTECT-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-hotfix-exception-scm-protect-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Hotfix Exception [SCM-PROTECT-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-repository-setup-scm-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Repository Setup [SCM-REPO]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Repository Setup [SCM-REPO]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-every-repository-includes-scm-repo-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Every Repository Includes [SCM-REPO-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-secrets-and-environment-config-scm-repo-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Secrets and Environment Config [SCM-REPO-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="source-control">Source Control</h1>
+<p>We use Git on every engagement. These standards cover how we branch, commit, and submit work for review. The goal is a history that's readable, a process that prevents accidents, and a workflow that scales across teams.</p>
+<hr />
+<h2 id="1-branching-strategy-scm-branch">1. Branching Strategy [SCM-BRANCH]</h2>
+<h3 id="11-branch-structure-scm-branch-01">1.1 Branch Structure [SCM-BRANCH-01]</h3>
+<p>We use a simplified trunk-based model with short-lived feature branches:</p>
+<ul>
+<li><code>main</code> — production-ready code at all times. Protected. Direct commits are not allowed.</li>
+<li><code>develop</code> — integration branch for active development (used on longer-running engagements). Optional; some projects merge directly to main.</li>
+<li><code>feature/&lt;short-description&gt;</code> — one feature or story per branch, branched from main (or develop)</li>
+<li><code>bugfix/&lt;short-description&gt;</code> — bug fixes, branched from main</li>
+<li><code>hotfix/&lt;short-description&gt;</code> — urgent production fixes, branched from main, merged to main and develop</li>
+<li><code>release/&lt;version&gt;</code> — release preparation (optional, for versioned projects)</li>
+</ul>
+<h3 id="12-branch-naming-scm-branch-02">1.2 Branch Naming [SCM-BRANCH-02]</h3>
+<p>Branch names are lowercase and kebab-case. They include the work item ID where possible:</p>
+<pre><code>feature/12345-add-retention-notification
+bugfix/12346-fix-email-formatting
+hotfix/fix-auth-timeout
+</code></pre>
+<p>No vague names like <code>fix-stuff</code>, <code>my-branch</code>, or <code>wip</code>. If the branch name doesn't describe the work, it's wrong.</p>
+<h3 id="13-branch-lifetime-scm-branch-03">1.3 Branch Lifetime [SCM-BRANCH-03]</h3>
+<p>Feature branches are short-lived — merged within one sprint (two weeks) in most cases. A branch that lives longer than two weeks has grown too large or has a dependency problem. Either break the work into smaller PRs or address the dependency.</p>
+<p>Delete branches immediately after merge. Stale branches create confusion about what's active.</p>
+<hr />
+<h2 id="2-commit-standards-scm-commit">2. Commit Standards [SCM-COMMIT]</h2>
+<h3 id="21-commit-often-scm-commit-01">2.1 Commit Often [SCM-COMMIT-01]</h3>
+<p>Commit small, coherent units of work. A commit should represent a single logical change that leaves the codebase in a working state. Don't commit half-finished work to a shared branch — if you need a checkpoint, use a local commit or a draft PR.</p>
+<h3 id="22-commit-message-format-scm-commit-02">2.2 Commit Message Format [SCM-COMMIT-02]</h3>
+<p>We follow a simplified Conventional Commits style:</p>
+<pre><code>&lt;type&gt;: &lt;short summary&gt;
+
+&lt;optional body explaining why, not what&gt;
+
+&lt;optional footer: refs #12345&gt;
+</code></pre>
+<p><strong>Type values:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>feat</code></td>
+<td>New feature or user-visible capability</td>
+</tr>
+<tr>
+<td><code>fix</code></td>
+<td>Bug fix</td>
+</tr>
+<tr>
+<td><code>refactor</code></td>
+<td>Code change with no behavior change</td>
+</tr>
+<tr>
+<td><code>test</code></td>
+<td>Adding or updating tests only</td>
+</tr>
+<tr>
+<td><code>docs</code></td>
+<td>Documentation only</td>
+</tr>
+<tr>
+<td><code>chore</code></td>
+<td>Build, tooling, dependency updates</td>
+</tr>
+<tr>
+<td><code>perf</code></td>
+<td>Performance improvement</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<pre><code>feat: add email notification after retention cleanup
+
+fix: prevent null reference when user has no assigned org
+
+refactor: extract RecordingArchiveService from controller
+
+chore: upgrade EF Core to 9.0.4
+</code></pre>
+<h3 id="23-commit-message-rules-scm-commit-03">2.3 Commit Message Rules [SCM-COMMIT-03]</h3>
+<ul>
+<li>Subject line: 50 characters or fewer, imperative mood ("add" not "adds" or "added"), no period at the end</li>
+<li>Body: wrap at 72 characters, explain <strong>why</strong> the change was made (not what — the diff shows what)</li>
+<li>Reference the work item ID in the footer: <code>refs #12345</code> or <code>fixes #12345</code></li>
+<li>Never commit merge commits on feature branches — rebase instead</li>
+</ul>
+<h3 id="24-dont-commit-scm-commit-04">2.4 Don't Commit [SCM-COMMIT-04]</h3>
+<p>Never commit:</p>
+<ul>
+<li>Secrets, API keys, or credentials (use environment variables or a secrets manager)</li>
+<li>Build artifacts, compiled output, or generated files (cover with <code>.gitignore</code>)</li>
+<li>IDE-specific files (<code>.vs/</code>, <code>.idea/</code>, <code>.DS_Store</code>) — use a global <code>.gitignore</code></li>
+<li><code>TODO</code> comments that should be tickets — open a ticket instead</li>
+<li>Commented-out code — remove it; version control is the history</li>
+</ul>
+<hr />
+<h2 id="3-pull-requests-scm-pr">3. Pull Requests [SCM-PR]</h2>
+<h3 id="31-pr-size-scm-pr-01">3.1 PR Size [SCM-PR-01]</h3>
+<p>Keep PRs small. A PR that touches more than 400 lines of net-new logic is usually too big. Large PRs get superficial reviews. If a feature requires a large change, stack smaller PRs that can be reviewed and merged independently.</p>
+<p>The right size for a PR: a reviewer can hold the change in their head at once and give it the attention it deserves in 30–45 minutes.</p>
+<h3 id="32-pr-process-scm-pr-02">3.2 PR Process [SCM-PR-02]</h3>
+<ol>
+<li>Branch off main (or develop), make your changes</li>
+<li>Self-review your diff before opening the PR</li>
+<li>Open the PR with a complete description (see <a href="../code-review/">Code Review</a> for description standards)</li>
+<li>Request review from at least one developer — senior changes require the Tech Lead</li>
+<li>Address all feedback; re-request review when ready</li>
+<li>Author merges after approval — not the reviewer</li>
+</ol>
+<h3 id="33-ci-requirements-scm-pr-03">3.3 CI Requirements [SCM-PR-03]</h3>
+<p>No PR merges with a failing CI pipeline. The pipeline must pass on the latest commit at the time of merge. This is enforced via branch protection rules — bypasses are not permitted outside of declared emergencies.</p>
+<p>The CI pipeline runs at minimum: build, lint, unit tests, and integration tests (where applicable).</p>
+<h3 id="34-merge-strategy-scm-pr-04">3.4 Merge Strategy [SCM-PR-04]</h3>
+<p>We use <strong>squash merges</strong> by default. The squash commit message is the PR title (clean it up if it's not descriptive). This keeps the main branch history readable — one commit per PR.</p>
+<p>Merge commits are used only for long-lived branch integration (e.g., release → main). Rebase merges are permitted for engineers who prefer them on personal branches but are not the standard.</p>
+<hr />
+<h2 id="4-protected-branches-scm-protect">4. Protected Branches [SCM-PROTECT]</h2>
+<h3 id="41-main-branch-rules-scm-protect-01">4.1 Main Branch Rules [SCM-PROTECT-01]</h3>
+<p>The <code>main</code> branch (and <code>develop</code>, if used) has the following protections enforced in the repository settings:</p>
+<ul>
+<li>Require pull request before merging</li>
+<li>Require at least one approval</li>
+<li>Dismiss stale reviews when new commits are pushed</li>
+<li>Require CI status checks to pass</li>
+<li>Restrict who can push directly (Tech Lead and above for hotfixes only)</li>
+</ul>
+<p>These rules are configured in the repository, not enforced by convention. Don't create repositories without them.</p>
+<h3 id="42-hotfix-exception-scm-protect-02">4.2 Hotfix Exception [SCM-PROTECT-02]</h3>
+<p>A genuine hotfix (production down or critical data issue) can bypass the standard review queue with Tech Lead approval. The bypass is temporary — the PR still exists, CI still runs, and a follow-up review happens within 24 hours of the merge.</p>
+<p>Document the bypass and the reason in the PR description.</p>
+<hr />
+<h2 id="5-repository-setup-scm-repo">5. Repository Setup [SCM-REPO]</h2>
+<h3 id="51-every-repository-includes-scm-repo-01">5.1 Every Repository Includes [SCM-REPO-01]</h3>
+<ul>
+<li><code>README.md</code> — setup instructions, how to run, how to test</li>
+<li><code>.gitignore</code> — appropriate for the language and tooling</li>
+<li><code>.editorconfig</code> — consistent formatting across editors</li>
+<li>CI/CD pipeline configuration (GitHub Actions, Azure Pipelines, or equivalent)</li>
+<li>Branch protection rules on main</li>
+</ul>
+<h3 id="52-secrets-and-environment-config-scm-repo-02">5.2 Secrets and Environment Config [SCM-REPO-02]</h3>
+<p>Repository secrets (API keys, connection strings, credentials) are stored in the CI/CD secrets store or a secrets manager — never in the repository, never in environment files committed to source control. <code>.env</code> files are in <code>.gitignore</code>. If a <code>.env.example</code> is committed, it contains only key names, never values.</p>
+<p>If a secret is accidentally committed, treat it as compromised immediately — rotate it before doing anything else.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

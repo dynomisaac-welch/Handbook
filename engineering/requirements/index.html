@@ -1,0 +1,1442 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../code-review/">
+      
+      
+        <link rel="next" href="../coding-standards/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Requirements & Work Items - Condado Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#requirements-work-items" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Condado Handbook" class="md-header__button md-logo" aria-label="Condado Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Condado Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Requirements & Work Items
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../company/values/" class="md-tabs__link">
+          
+  
+  
+  Company
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../delivery/project-lifecycle/" class="md-tabs__link">
+          
+  
+  
+  Delivery
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../clients/communication/" class="md-tabs__link">
+          
+  
+  
+  Clients
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../code-review/" class="md-tabs__link">
+          
+  
+  
+  Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Condado Handbook" class="md-nav__button md-logo" aria-label="Condado Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Condado Handbook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Company
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Company
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mission & Values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/how-we-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How We Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../delivery/project-lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../delivery/status-reporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clients
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clients
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clients/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Engineering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Engineering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements & Work Items
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements & Work Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#who-owns-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Owns This
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-fields-every-work-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Fields — Every Work Item
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-story-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Story Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceptance Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition of Ready
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-and-non-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional and Non-Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-and-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI and Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies-and-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies and Risks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links and References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coding-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#who-owns-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Owns This
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-fields-every-work-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Fields — Every Work Item
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-story-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Story Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceptance Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition of Ready
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-and-non-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional and Non-Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-and-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI and Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies-and-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies and Risks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links and References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="requirements-work-items">Requirements &amp; Work Items</h1>
+<p>Clear requirements are the foundation of predictable delivery. When a work item is ambiguous, developers guess, testers can't verify, and reviewers can't tell if the work is done. These standards exist so every story that enters a sprint is ready to build.</p>
+<p>These standards apply across all project types and tools (Azure DevOps, Jira, Linear, etc.). The fields and structure below are the baseline — individual projects may add to them but not remove them.</p>
+<hr />
+<h2 id="who-owns-this">Who Owns This</h2>
+<p>Writing requirements is primarily the responsibility of the <strong>Product Owner (PO)</strong> or <strong>Business Analyst (BA)</strong> on the engagement. But requirements are a team sport:</p>
+<ul>
+<li>Developers read requirements and flag gaps during refinement</li>
+<li>Testers use acceptance criteria to verify work — if they can't, the criteria aren't done</li>
+<li>The DM ensures stories are Ready before they enter a sprint</li>
+</ul>
+<hr />
+<h2 id="core-fields-every-work-item">Core Fields — Every Work Item</h2>
+<p>Every work item must have these fields before it leaves the backlog:</p>
+<p><strong>Title</strong> — One clear line. If you can't describe the work in a single short sentence, the item is probably too large. Break it up.</p>
+<p><strong>Description</strong> — A short paragraph explaining the purpose. What problem does this solve? Why does it matter?</p>
+<p><strong>Type</strong> — User Story, Bug, Task, or Enhancement.</p>
+<p><strong>Priority</strong> — High, Medium, or Low. Base this on business impact, not urgency to someone's personal preference.</p>
+<p><strong>Status</strong> — Where it sits in the workflow: Backlog, Ready, In Progress, In Review, Done.</p>
+<hr />
+<h2 id="user-story-format">User Story Format</h2>
+<p>When the work item is a User Story, use the standard format:</p>
+<blockquote>
+<p><strong>As a</strong> [user role], <strong>I want</strong> [what], <strong>so that</strong> [benefit / why].</p>
+</blockquote>
+<p>This format keeps the focus on the person using the feature and the value it delivers. All three parts are required. A story missing the "so that" is a story with no justification — which is a story that shouldn't be built.</p>
+<p><strong>Example:</strong></p>
+<blockquote>
+<p>As an administrator, I want to receive an email summary after the nightly data sync completes, so that I can confirm the sync succeeded or investigate failures before business hours.</p>
+</blockquote>
+<p>If a story can't be expressed in this format, it's often a Task (implementation detail) rather than a User Story. Tasks don't need the user story format, but they do need a clear description of the work and the expected outcome.</p>
+<hr />
+<h2 id="acceptance-criteria">Acceptance Criteria</h2>
+<p>Acceptance criteria define what "done" means. A story without acceptance criteria isn't a story — it's a wish.</p>
+<p><strong>Format:</strong> Use Given / When / Then (also called Gherkin or BDD):</p>
+<ul>
+<li><strong>Given</strong> — the starting condition or context</li>
+<li><strong>When</strong> — the action or event</li>
+<li><strong>Then</strong> — the expected result</li>
+</ul>
+<p><strong>Example:</strong></p>
+<blockquote>
+<p>Given the nightly sync has completed,<br />
+When all records are processed successfully,<br />
+Then the system sends a summary email to the admin distribution list by 6:00 AM.</p>
+</blockquote>
+<p><strong>Coverage:</strong> Acceptance criteria must cover three scenario types:</p>
+<ol>
+<li><strong>Happy path</strong> — the feature works as expected with valid input</li>
+<li><strong>Edge cases</strong> — unusual but valid situations (empty results, maximum values, slow networks)</li>
+<li><strong>Failure scenarios</strong> — what the system does when something goes wrong</li>
+</ol>
+<p>A story is not ready for development until all three are covered. If you can't write edge and failure criteria, you don't fully understand the requirement yet.</p>
+<hr />
+<h2 id="definition-of-ready">Definition of Ready</h2>
+<p>A work item is Ready for a sprint when all of the following are true:</p>
+<ul>
+<li>Title is clear and fits on one line</li>
+<li>Description explains the purpose and the "why"</li>
+<li>Type, Priority, and Status are set</li>
+<li>User story is written (if applicable)</li>
+<li>Acceptance criteria cover happy path, edge cases, and failures</li>
+<li>Dependencies are identified and resolved or tracked</li>
+<li>Any required design assets are attached or linked</li>
+<li>Story points are estimated</li>
+</ul>
+<p>If a story doesn't meet this bar, it stays in the backlog. Don't pull half-formed work into sprints — it generates churn, rework, and frustration.</p>
+<p><strong>Story point sizing:</strong> We use the Fibonacci sequence (1, 2, 3, 5, 8, 13). Points measure relative complexity, not hours. If a story is 13 points, split it. Stories over 8 points are high-risk and frequently slip.</p>
+<hr />
+<h2 id="functional-and-non-functional-requirements">Functional and Non-Functional Requirements</h2>
+<p>Most stories have both types. Both belong in the work item.</p>
+<p><strong>Functional requirements</strong> describe what the system does:</p>
+<ul>
+<li>What inputs the system accepts</li>
+<li>What the system does with each input</li>
+<li>Validation rules and error messages</li>
+<li>Business rules that apply</li>
+</ul>
+<p><strong>Non-functional requirements</strong> describe how the system behaves:</p>
+<ul>
+<li>Performance — "The page must load in under 2 seconds for 95% of requests"</li>
+<li>Security — authentication, authorization, data protection</li>
+<li>Scalability — expected load and growth</li>
+<li>Availability — uptime requirements</li>
+<li>Accessibility — WCAG 2.1 AA for all user-facing features</li>
+</ul>
+<p>Non-functional requirements are easy to skip and expensive to retrofit. Capture them during refinement, not during QA.</p>
+<hr />
+<h2 id="technical-details">Technical Details</h2>
+<p>Add a technical notes section when the story involves:</p>
+<ul>
+<li>External APIs — endpoints, request/response shapes</li>
+<li>Data model changes — schema updates, migrations</li>
+<li>Known dependencies — other features, third-party services</li>
+<li>Security considerations — data sensitivity, access control, audit requirements</li>
+</ul>
+<p>This section is optional for simple stories and required for anything touching infrastructure, integrations, or sensitive data. If the developer can't figure out what to build from the requirements alone, add more here.</p>
+<hr />
+<h2 id="ui-and-design">UI and Design</h2>
+<p>For any change that affects the user interface:</p>
+<ul>
+<li>Wireframes or mockups must be attached or linked (Figma preferred)</li>
+<li>Reference existing design patterns where applicable</li>
+<li>Include accessibility notes: color contrast, keyboard navigation, screen reader support</li>
+</ul>
+<p><strong>Rule:</strong> Don't start UI development without an approved design. Unilateral design decisions during development generate rework.</p>
+<hr />
+<h2 id="test-cases">Test Cases</h2>
+<p>List the test scenarios QA will use to verify the story. Work with the test team to make this complete before the story enters the sprint.</p>
+<ul>
+<li>Positive tests — valid inputs that should succeed</li>
+<li>Negative tests — invalid inputs that should fail safely</li>
+<li>Edge cases — boundary values, empty inputs, special characters</li>
+</ul>
+<p>For user-facing features, include at least one accessibility check.</p>
+<hr />
+<h2 id="dependencies-and-risks">Dependencies and Risks</h2>
+<p>Every story that depends on another team, system, or external service should call that out explicitly:</p>
+<ul>
+<li><strong>Dependencies</strong> — other stories, backend APIs, third-party services</li>
+<li><strong>Risks</strong> — unknowns, integration concerns</li>
+<li><strong>Blockers</strong> — anything that prevents work from starting</li>
+</ul>
+<p>If a dependency isn't resolved, the story isn't ready. Don't pull blocked stories into a sprint.</p>
+<hr />
+<h2 id="links-and-references">Links and References</h2>
+<p>Attach or link anything the team needs to understand the context:</p>
+<ul>
+<li>Parent epic</li>
+<li>Related bugs or follow-on stories</li>
+<li>Design documents or Figma files</li>
+<li>Relevant meeting notes or decisions</li>
+<li>Architecture documents (ADRs)</li>
+</ul>
+<p>Good links save 20 minutes of context-gathering at the start of every development session.</p>
+<hr />
+<h2 id="quick-checklist">Quick Checklist</h2>
+<p>Before marking a work item Ready for Development:</p>
+<ul>
+<li>[ ] Title is clear and fits on one line</li>
+<li>[ ] Description explains the purpose and why it matters</li>
+<li>[ ] Type, Priority, and Status are set</li>
+<li>[ ] User story is written (if a User Story type)</li>
+<li>[ ] Acceptance criteria cover happy path, edge cases, and failures</li>
+<li>[ ] Functional and non-functional requirements are documented</li>
+<li>[ ] Technical details captured (APIs, data models, security considerations)</li>
+<li>[ ] Design assets attached or linked (if UI changes)</li>
+<li>[ ] Test cases listed</li>
+<li>[ ] Dependencies and blockers identified</li>
+<li>[ ] Related items linked</li>
+<li>[ ] Story points estimated and item assigned</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

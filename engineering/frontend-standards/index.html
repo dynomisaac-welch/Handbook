@@ -1,0 +1,1970 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../coding-standards/">
+      
+      
+        <link rel="next" href="../database-standards/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Frontend Standards - Condado Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#frontend-standards" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Condado Handbook" class="md-header__button md-logo" aria-label="Condado Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Condado Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Frontend Standards
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../company/values/" class="md-tabs__link">
+          
+  
+  
+  Company
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../delivery/project-lifecycle/" class="md-tabs__link">
+          
+  
+  
+  Delivery
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../clients/communication/" class="md-tabs__link">
+          
+  
+  
+  Clients
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../code-review/" class="md-tabs__link">
+          
+  
+  
+  Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Condado Handbook" class="md-nav__button md-logo" aria-label="Condado Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Condado Handbook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Company
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Company
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mission & Values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/how-we-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How We Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Delivery
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../delivery/project-lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../delivery/status-reporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status Reporting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clients
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clients
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clients/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Engineering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Engineering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements & Work Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coding-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend Standards
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-project-structure-fe-proj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Project Structure [FE-PROJ]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Project Structure [FE-PROJ]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-general-principles-fe-proj-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 General Principles [FE-PROJ-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-mvc-layout-fe-proj-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 MVC Layout [FE-PROJ-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-react-nextjs-layout-fe-proj-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 React / Next.js Layout [FE-PROJ-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-no-deep-nesting-fe-proj-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 No Deep Nesting [FE-PROJ-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-naming-conventions-fe-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Naming Conventions [FE-NAME]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Naming Conventions [FE-NAME]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-files-and-folders-fe-name-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Files and Folders [FE-NAME-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-variables-and-functions-fe-name-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Variables and Functions [FE-NAME-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-css-classes-fe-name-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 CSS Classes [FE-NAME-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-accessibility-fe-a11y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Accessibility [FE-A11Y]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Accessibility [FE-A11Y]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-semantic-html-fe-a11y-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Semantic HTML [FE-A11Y-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-keyboard-navigation-fe-a11y-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Keyboard Navigation [FE-A11Y-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-color-and-contrast-fe-a11y-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Color and Contrast [FE-A11Y-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-forms-fe-a11y-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Forms [FE-A11Y-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-images-and-media-fe-a11y-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Images and Media [FE-A11Y-05]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-testing-fe-a11y-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Testing [FE-A11Y-06]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-responsive-design-fe-resp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Responsive Design [FE-RESP]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-error-handling-and-user-messaging-fe-err" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Error Handling and User Messaging [FE-ERR]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Error Handling and User Messaging [FE-ERR]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-principles-fe-err-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Principles [FE-ERR-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-error-state-coverage-fe-err-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Error State Coverage [FE-ERR-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mvc-and-bootstrap-5-fe-mvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. MVC and Bootstrap 5 [FE-MVC]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. MVC and Bootstrap 5 [FE-MVC]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-view-architecture-fe-mvc-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 View Architecture [FE-MVC-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-bootstrap-usage-fe-mvc-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Bootstrap Usage [FE-MVC-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-react-nextjs-typescript-and-tailwind-fe-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. React, Next.js, TypeScript, and Tailwind [FE-REACT]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. React, Next.js, TypeScript, and Tailwind [FE-REACT]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-component-architecture-fe-react-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Component Architecture [FE-REACT-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-typescript-fe-react-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 TypeScript [FE-REACT-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-state-management-fe-react-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 State Management [FE-REACT-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-tailwind-css-fe-react-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Tailwind CSS [FE-REACT-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-nextjs-specifics-fe-react-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Next.js Specifics [FE-REACT-05]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-frontend-testing-fe-react-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Frontend Testing [FE-REACT-06]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-project-structure-fe-proj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Project Structure [FE-PROJ]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Project Structure [FE-PROJ]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-general-principles-fe-proj-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 General Principles [FE-PROJ-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-mvc-layout-fe-proj-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 MVC Layout [FE-PROJ-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-react-nextjs-layout-fe-proj-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 React / Next.js Layout [FE-PROJ-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-no-deep-nesting-fe-proj-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 No Deep Nesting [FE-PROJ-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-naming-conventions-fe-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Naming Conventions [FE-NAME]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Naming Conventions [FE-NAME]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-files-and-folders-fe-name-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Files and Folders [FE-NAME-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-variables-and-functions-fe-name-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Variables and Functions [FE-NAME-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-css-classes-fe-name-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 CSS Classes [FE-NAME-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-accessibility-fe-a11y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Accessibility [FE-A11Y]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Accessibility [FE-A11Y]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-semantic-html-fe-a11y-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Semantic HTML [FE-A11Y-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-keyboard-navigation-fe-a11y-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Keyboard Navigation [FE-A11Y-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-color-and-contrast-fe-a11y-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Color and Contrast [FE-A11Y-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-forms-fe-a11y-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Forms [FE-A11Y-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-images-and-media-fe-a11y-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Images and Media [FE-A11Y-05]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-testing-fe-a11y-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Testing [FE-A11Y-06]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-responsive-design-fe-resp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Responsive Design [FE-RESP]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-error-handling-and-user-messaging-fe-err" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Error Handling and User Messaging [FE-ERR]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Error Handling and User Messaging [FE-ERR]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-principles-fe-err-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Principles [FE-ERR-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-error-state-coverage-fe-err-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Error State Coverage [FE-ERR-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mvc-and-bootstrap-5-fe-mvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. MVC and Bootstrap 5 [FE-MVC]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. MVC and Bootstrap 5 [FE-MVC]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-view-architecture-fe-mvc-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 View Architecture [FE-MVC-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-bootstrap-usage-fe-mvc-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Bootstrap Usage [FE-MVC-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-react-nextjs-typescript-and-tailwind-fe-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. React, Next.js, TypeScript, and Tailwind [FE-REACT]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. React, Next.js, TypeScript, and Tailwind [FE-REACT]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-component-architecture-fe-react-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Component Architecture [FE-REACT-01]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-typescript-fe-react-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 TypeScript [FE-REACT-02]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-state-management-fe-react-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 State Management [FE-REACT-03]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-tailwind-css-fe-react-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Tailwind CSS [FE-REACT-04]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-nextjs-specifics-fe-react-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Next.js Specifics [FE-REACT-05]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-frontend-testing-fe-react-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Frontend Testing [FE-REACT-06]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="frontend-standards">Frontend Standards</h1>
+<p>These standards apply to all frontend work across Condado engagements. We work across two stacks depending on the engagement: MVC with Bootstrap 5, and React with Next.js, TypeScript, and Tailwind CSS. Standards in sections 1–5 apply to both. Sections 6–7 are stack-specific.</p>
+<p>When citing a rule in a pull request or code review, use the section code in brackets (e.g., <code>[FE-A11Y-02]</code>). Codes are stable.</p>
+<hr />
+<h2 id="1-project-structure-fe-proj">1. Project Structure [FE-PROJ]</h2>
+<h3 id="11-general-principles-fe-proj-01">1.1 General Principles [FE-PROJ-01]</h3>
+<p>Group files by <strong>feature, not by file type</strong>. A feature folder contains its views or components, styles, tests, and models. Shared utilities and design tokens live in a top-level <code>shared/</code> or <code>common/</code> folder, never buried inside a feature.</p>
+<p>Every frontend project has a <code>README.md</code> at root describing how to install, run the dev server, build for production, and run tests.</p>
+<h3 id="12-mvc-layout-fe-proj-02">1.2 MVC Layout [FE-PROJ-02]</h3>
+<pre><code>/Views
+  /Shared           ← layouts, partials, view components
+  /FeatureName/
+/wwwroot
+  /css
+    site.css
+    /features/
+  /js
+    site.js
+    /features/
+  /lib              ← vendored libraries
+  /images/
+</code></pre>
+<h3 id="13-react-nextjs-layout-fe-proj-03">1.3 React / Next.js Layout [FE-PROJ-03]</h3>
+<pre><code>/src
+  /app              ← Next.js App Router pages and layouts
+  /components
+    /ui             ← design-system primitives (Button, Input, Modal)
+    /features       ← feature-specific composed components
+    /layouts        ← page shells and navigation
+  /hooks            ← custom React hooks
+  /lib              ← utilities, API clients, constants
+  /types            ← shared TypeScript types and interfaces
+  /styles           ← global CSS, Tailwind overrides
+/public             ← static assets
+</code></pre>
+<h3 id="14-no-deep-nesting-fe-proj-04">1.4 No Deep Nesting [FE-PROJ-04]</h3>
+<p>Directory nesting beyond four levels from root signals a hierarchy problem. Use path aliases (<code>@/lib/format</code>) — never relative imports like <code>../../../../shared/utils</code>.</p>
+<hr />
+<h2 id="2-naming-conventions-fe-name">2. Naming Conventions [FE-NAME]</h2>
+<h3 id="21-files-and-folders-fe-name-01">2.1 Files and Folders [FE-NAME-01]</h3>
+<table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Convention</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>React components</td>
+<td>PascalCase <code>.tsx</code></td>
+<td><code>RecordingCard.tsx</code></td>
+</tr>
+<tr>
+<td>React hooks</td>
+<td>camelCase, <code>use</code> prefix</td>
+<td><code>useRecordings.ts</code></td>
+</tr>
+<tr>
+<td>Utility modules</td>
+<td>camelCase <code>.ts</code></td>
+<td><code>formatDate.ts</code></td>
+</tr>
+<tr>
+<td>MVC views</td>
+<td>PascalCase <code>.cshtml</code></td>
+<td><code>Details.cshtml</code></td>
+</tr>
+<tr>
+<td>MVC partials</td>
+<td>PascalCase, <code>_</code> prefix</td>
+<td><code>_RecordingCard.cshtml</code></td>
+</tr>
+<tr>
+<td>CSS files</td>
+<td>kebab-case</td>
+<td><code>recording-card.css</code></td>
+</tr>
+<tr>
+<td>Test files</td>
+<td>match source + <code>.test</code></td>
+<td><code>RecordingCard.test.tsx</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-variables-and-functions-fe-name-02">2.2 Variables and Functions [FE-NAME-02]</h3>
+<ul>
+<li>camelCase for local variables, functions, parameters, object properties</li>
+<li>PascalCase for React component names, TypeScript interfaces, type aliases, enums</li>
+<li><code>UPPER_SNAKE_CASE</code> for compile-time constants and environment variable keys</li>
+<li>Boolean variables use <code>is</code>, <code>has</code>, <code>should</code>, or <code>can</code> prefixes: <code>isLoading</code>, <code>hasPermission</code></li>
+<li>Event handlers: <code>handleSave</code> for the function, <code>onSave</code> for the prop</li>
+</ul>
+<h3 id="23-css-classes-fe-name-03">2.3 CSS Classes [FE-NAME-03]</h3>
+<p><strong>MVC / Bootstrap:</strong> use Bootstrap utilities first. Custom classes use kebab-case with a feature prefix. Never use generic names like <code>container</code>, <code>wrapper</code>, or <code>content</code> without a prefix — they collide across the application.</p>
+<p><strong>React / Tailwind:</strong> use Tailwind utility classes directly in JSX. When extracting a class, use <code>@apply</code> in a CSS module with kebab-case naming. Avoid class names as JavaScript hooks — use <code>data-*</code> attributes or refs instead.</p>
+<hr />
+<h2 id="3-accessibility-fe-a11y">3. Accessibility [FE-A11Y]</h2>
+<p>Accessible interfaces are not optional. Every new page and every changed component must meet <strong>WCAG 2.1 Level AA</strong>.</p>
+<h3 id="31-semantic-html-fe-a11y-01">3.1 Semantic HTML [FE-A11Y-01]</h3>
+<ul>
+<li>Use native HTML elements for their intended purpose: <code>&lt;button&gt;</code> for actions, <code>&lt;a&gt;</code> for navigation</li>
+<li>Never attach click handlers to <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> — use <code>&lt;button&gt;</code></li>
+<li>Structure pages with landmarks: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code></li>
+<li>Use heading levels (<code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>) in document order — never skip a level for styling</li>
+</ul>
+<h3 id="32-keyboard-navigation-fe-a11y-02">3.2 Keyboard Navigation [FE-A11Y-02]</h3>
+<ul>
+<li>Every interactive element is reachable by keyboard alone</li>
+<li>Focus order follows the visual reading order</li>
+<li>Custom components implement the appropriate ARIA pattern (e.g., <code>role="dialog"</code> with focus trapping for modals)</li>
+<li>Never suppress the browser's default focus ring without providing an equal or better alternative</li>
+</ul>
+<h3 id="33-color-and-contrast-fe-a11y-03">3.3 Color and Contrast [FE-A11Y-03]</h3>
+<ul>
+<li>Text: 4.5:1 contrast ratio against background (3:1 for large text)</li>
+<li>Color is never the sole means of conveying information — pair it with text, icons, or patterns</li>
+<li>Always verify brand colors against WCAG contrast requirements before using them in UI</li>
+</ul>
+<h3 id="34-forms-fe-a11y-04">3.4 Forms [FE-A11Y-04]</h3>
+<ul>
+<li>Every form input has a visible <code>&lt;label&gt;</code> or an <code>aria-label</code></li>
+<li>Error messages are associated with their field via <code>aria-describedby</code></li>
+<li>Required fields are indicated visually and with <code>aria-required="true"</code></li>
+<li>Form submission errors are announced to screen readers via <code>aria-live="polite"</code></li>
+</ul>
+<h3 id="35-images-and-media-fe-a11y-05">3.5 Images and Media [FE-A11Y-05]</h3>
+<ul>
+<li>Every <code>&lt;img&gt;</code> has a meaningful <code>alt</code> attribute — or <code>alt=""</code> if purely decorative</li>
+<li>Icons used as buttons include <code>aria-label</code> on the button element</li>
+<li>Video and audio content include captions or transcripts</li>
+</ul>
+<h3 id="36-testing-fe-a11y-06">3.6 Testing [FE-A11Y-06]</h3>
+<p>Run an axe-core or Lighthouse accessibility audit on every page before PR. Test with keyboard-only navigation. Spot-check critical flows with a screen reader (NVDA on Windows, VoiceOver on macOS).</p>
+<hr />
+<h2 id="4-responsive-design-fe-resp">4. Responsive Design [FE-RESP]</h2>
+<p>Every page renders correctly from 320px to 2560px.</p>
+<ul>
+<li>Write styles <strong>mobile-first</strong> — base styles for small viewports, add complexity at larger breakpoints</li>
+<li>Use native breakpoints (Bootstrap <code>sm/md/lg/xl/xxl</code> or Tailwind <code>sm/md/lg/xl/2xl</code>) — don't override them with desktop-first media queries</li>
+<li>Test at 320px, 768px, 1024px, and 1440px before marking a story done</li>
+<li>Touch targets are at least 44x44px on mobile</li>
+</ul>
+<hr />
+<h2 id="5-error-handling-and-user-messaging-fe-err">5. Error Handling and User Messaging [FE-ERR]</h2>
+<h3 id="51-principles-fe-err-01">5.1 Principles [FE-ERR-01]</h3>
+<ul>
+<li>All errors are caught — uncaught errors that surface as blank screens or console dumps are bugs</li>
+<li>Error messages tell the user what happened and what to do next, not what went wrong internally</li>
+<li>Never show technical error messages, stack traces, or internal identifiers to end users</li>
+</ul>
+<h3 id="52-error-state-coverage-fe-err-02">5.2 Error State Coverage [FE-ERR-02]</h3>
+<p>Every data-fetching component handles three states: loading, success, and error. Every form handles validation errors inline (field-level) and submission errors at the form level.</p>
+<hr />
+<h2 id="6-mvc-and-bootstrap-5-fe-mvc">6. MVC and Bootstrap 5 [FE-MVC]</h2>
+<h3 id="61-view-architecture-fe-mvc-01">6.1 View Architecture [FE-MVC-01]</h3>
+<ul>
+<li>Views are thin — no business logic in Razor templates</li>
+<li>Shared UI units go in <code>Views/Shared/Components/</code> as View Components, not in <code>Partial</code> files scattered across feature folders</li>
+<li>JavaScript in MVC projects is feature-scoped: one file per feature in <code>wwwroot/js/features/</code></li>
+<li>No inline JavaScript in <code>.cshtml</code> files — keep scripts in <code>.js</code> files and initialize on DOMContentLoaded</li>
+</ul>
+<h3 id="62-bootstrap-usage-fe-mvc-02">6.2 Bootstrap Usage [FE-MVC-02]</h3>
+<ul>
+<li>Use Bootstrap utility classes first — don't write custom CSS for what Bootstrap provides</li>
+<li>Don't override Bootstrap variables in <code>site.css</code> — use <code>_variables.scss</code> before compilation if customizing</li>
+<li>Document any intentional Bootstrap component overrides with a comment</li>
+</ul>
+<hr />
+<h2 id="7-react-nextjs-typescript-and-tailwind-fe-react">7. React, Next.js, TypeScript, and Tailwind [FE-REACT]</h2>
+<h3 id="71-component-architecture-fe-react-01">7.1 Component Architecture [FE-REACT-01]</h3>
+<ul>
+<li>Functional components only — no class components</li>
+<li>One component per file; file name matches the component name</li>
+<li>Keep components small: if a component renders more than one distinct section, it probably should be split</li>
+<li>Separate concerns: data fetching hooks live in <code>/hooks</code>, presentation components in <code>/components</code></li>
+</ul>
+<h3 id="72-typescript-fe-react-02">7.2 TypeScript [FE-REACT-02]</h3>
+<ul>
+<li>TypeScript strict mode is on in every project</li>
+<li>No <code>any</code> — use <code>unknown</code> and narrow types, or define the shape correctly</li>
+<li>Shared domain types live in <code>/types</code> and are reused rather than redefined</li>
+<li>Prefer <code>interface</code> for object shapes; use <code>type</code> for unions, intersections, and mapped types</li>
+</ul>
+<h3 id="73-state-management-fe-react-03">7.3 State Management [FE-REACT-03]</h3>
+<ul>
+<li>Start with local state (<code>useState</code>, <code>useReducer</code>) — reach for global state only when local state genuinely doesn't work</li>
+<li>Server state (data from APIs) is managed with a data-fetching library (React Query or SWR) — not in Redux or Context</li>
+<li>Don't store derived values in state — compute them from existing state</li>
+</ul>
+<h3 id="74-tailwind-css-fe-react-04">7.4 Tailwind CSS [FE-REACT-04]</h3>
+<ul>
+<li>Apply Tailwind utility classes directly in JSX</li>
+<li>Extract repeated utility class combinations into components, not into custom CSS classes</li>
+<li>Use design tokens (spacing, color, typography) from the Tailwind config — don't hardcode values</li>
+<li>The Tailwind config is the source of truth for design decisions; update it rather than writing one-off styles</li>
+</ul>
+<h3 id="75-nextjs-specifics-fe-react-05">7.5 Next.js Specifics [FE-REACT-05]</h3>
+<ul>
+<li>Use the App Router (<code>/app</code>) for all new projects</li>
+<li>Prefer Server Components for data fetching — add <code>'use client'</code> only when interactivity requires it</li>
+<li>Route-level loading states use <code>loading.tsx</code>; error boundaries use <code>error.tsx</code></li>
+<li>Metadata is set via the <code>Metadata</code> API, not manual <code>&lt;head&gt;</code> tags</li>
+</ul>
+<h3 id="76-frontend-testing-fe-react-06">7.6 Frontend Testing [FE-REACT-06]</h3>
+<ul>
+<li>Unit tests cover utility functions and custom hooks</li>
+<li>Component tests (React Testing Library) cover user interactions and conditional rendering</li>
+<li>Avoid testing implementation details — test what the user sees and does</li>
+<li>Critical user flows (login, checkout, form submission) have end-to-end test coverage</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
