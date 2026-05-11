@@ -8,7 +8,7 @@
 
 ## The Role
 
-The project manager is the single-threaded owner of a client engagement. Not the coordinator. Not the facilitator. The owner. That means one person is accountable for whether the project ships on time, on budget, and to quality — and one person the client can call when something goes wrong. The PM treats their engagement like a mini-business: they understand the budget, know where it's going, and are responsible for the outcome.
+The project manager is the single-threaded owner of a client engagement. Not the coordinator. Not the facilitator. The owner. That means one person is accountable for whether the project ships on time, on budget, and to functional quality — and one person the client can call when something goes wrong. The PM treats their engagement like a mini-business: they understand the budget, know where it's going, and are responsible for the outcome.
 
 This document defines what that ownership looks like — the accountabilities, the boundaries, the working relationships, the decision rights, and how performance is measured. For how to perform the behaviors inside this role, read the [PM Standards Playbook](pm_standards_playbook.md). For what to do at each phase of an engagement, read the [Project Lifecycle](project-lifecycle.md). This document is about what you own.
 
@@ -41,6 +41,7 @@ The PM owns the financial health of their engagement. This is not optional or se
 - Manage scope as the primary financial tool: when the engagement is trending over, scope is the first lever, not schedule
 - Document, price, and secure approval for every scope change before any work begins — no verbal yeses
 - Own the margin narrative: be able to speak to the engagement's financial health at any check-in without being asked
+- Know the receivables status before agreeing to any scope increase. The PM doesn't collect — but doesn't expand scope on an account that isn't current. A strong paper margin means nothing if the client is 60 days past due. Flag aging receivables to the Portfolio Manager immediately and hold scope expansion until resolved
 - Surface renewal and expansion signals to the Portfolio Manager — a closed engagement with no next step is a missed opportunity
 
 ### 2. Client Relationship Management
@@ -68,6 +69,8 @@ The PM leads the delivery team day-to-day. That means running the ceremonies, re
 - Maintain a healthy, well-groomed backlog in partnership with the engineering team: 2+ sprints of Ready work at all times
 - Partner with the Tech Lead on quality and technical concerns that surface within the engagement
 - Establish team norms, decision rights, and escalation paths at kickoff — not after the first conflict
+- Set the board discipline at kickoff: engineers own their own tickets. ADO reflects the team's real work, not the PM's summary of it. If a ticket isn't updated, that's a standup conversation — not a task the PM absorbs
+- If it isn't in ADO, it didn't happen. A story that exists only in someone's head or in a Teams chat does not exist
 
 ### 4. Scope & Delivery Management
 
@@ -75,8 +78,9 @@ The PM owns the engagement's statement of work, the milestone plan, and the risk
 
 - Track progress against plan weekly; maintain an honest, current picture of status at all times
 - Update the risk register weekly — top three risks always visible, with owner and mitigation
-- Run a pre-mortem before every high-stakes phase: "If this phase fails, what killed it?"
+- Run a pre-mortem before every high-stakes phase — required for all engagements >$100k; complete it before the phase begins and file the output in NOTES
 - Distinguish between risk (known unknowns you can plan for) and ambiguity (unknown unknowns requiring exploratory action) — they need different responses
+- When ambiguity is high, propose a discovery phase or technical spike before committing to a fixed-price delivery; a spike converts ambiguity into information, a fixed-price commitment converts it into margin risk
 - Assess every scope change request for effort, timeline, and budget impact before responding
 - Use the scope change memo template for every change, regardless of size — pattern recognition depends on it
 - Coordinate dependencies across teams, vendors, and client stakeholders that affect delivery
@@ -101,7 +105,8 @@ The Portfolio Manager should be able to assess the health of any engagement at a
 - Deliver weekly engagement status to the Portfolio Manager by Friday EOD — every week, without exception
 - Format: situation, impact, what you're doing, what you need
 - Escalate within 24 hours when any threshold is crossed (see Decision Authority section below)
-- Maintain clean, current records in Notion and Azure DevOps at all times
+- Maintain clean, current records in Notion at all times
+- Hold the team accountable for keeping Azure DevOps current — the PM enforces ADO discipline, not performs it; an out-of-date board is a team behavior problem, not a PM to-do item
 - Flag scope creep, client friction, and team issues early — never after they've become visible to others
 
 ---
@@ -111,6 +116,8 @@ The Portfolio Manager should be able to assess the health of any engagement at a
 **Not an individual contributor who also manages.** When a PM is doing too much hands-on technical or design work, the engagement is either understaffed or the PM hasn't fully stepped into the ownership mindset. Leadership is the job. Execution is what the team does.
 
 **Not the technical decision-maker.** The Tech Lead owns architecture, development standards, and technical implementation choices. The PM is accountable for the outcome of technical work — not the method by which it's produced. When a PM starts overriding technical judgment, they've left their lane. When technical quality threatens the engagement, the PM's job is to surface it to the Tech Lead and Portfolio Manager — not to solve it.
+
+**Quality accountability is split, not shared.** The PM is accountable for functional quality: does this feature solve the client's stated problem? Do the acceptance criteria capture the right requirement? Is what was built what was asked for? That is the PM's standard to hold. Structural quality — code health, test coverage standards, architecture soundness, bug severity at the implementation level — belongs to the Tech Lead. When structural quality threatens the engagement, the PM escalates. When functional quality is at risk, the PM owns the fix. On engagements where a Product Owner is present, functional quality ownership transfers to that role. The PM's accountability then shifts to ensuring the PO has the information, access, and authority to exercise it.
 
 **Not the Portfolio Manager.** Cross-engagement resourcing, agency pricing strategy, client executive relationships, and new contract decisions belong to the Portfolio Manager. A PM who escalates everything upward isn't owning the engagement. A PM who never escalates isn't either. The boundary is clear: own what's yours, escalate what isn't.
 
@@ -160,7 +167,7 @@ The Portfolio Manager should be able to assess the health of any engagement at a
 | Relationship | Nature | Key interface |
 |---|---|---|
 | **Portfolio Manager** | Direct manager | Weekly 1:1, status report, escalation path for budget/client/resource decisions above PM authority |
-| **Tech Lead** | Peer | Technical quality, architecture questions, engineering team issues — PM owns the outcome, Tech Lead owns the method |
+| **Tech Lead** | Peer | Structural quality (code health, test coverage, architecture) and implementation choices — PM owns functional quality and acceptance; Tech Lead owns structural quality and method |
 | **Delivery Team** | Day-to-day direct leadership | Ceremonies, blockers, sprint commitment, psychological safety |
 | **Client Stakeholders** | Primary relationship owner | Weekly status, sprint demo, scope and decision conversations — the PM is the client's first call |
 | **Other PMs** | Peers | Knowledge-sharing, lessons learned, cross-engagement dependencies surfaced upward |
@@ -178,7 +185,7 @@ The PM acts without escalation on:
 | **Budget** | Reallocate hours within sprint; adjust team composition within budget; defer non-critical work to manage burn |
 | **Timeline** | Sprint schedule within release timeline; internal milestone adjustments; velocity-based forecasting |
 | **Scope** | Story breakdown and acceptance criteria; technical implementation details; minor clarifications of existing requirements (<5% effort impact); story priority within sprint |
-| **Quality** | When a story meets Definition of Done; test coverage requirements; bug severity classification; when to release to staging |
+| **Functional Quality** | Whether acceptance criteria are met; whether delivered work solves the client's stated problem; when to demo to the client; bug priority relative to client impact |
 | **Resources** | Daily task assignments; sprint team composition; coverage during PTO; request for specialist support |
 | **Client** | Day-to-day communication; status report frequency and format; demo schedule and content; working session attendees |
 
@@ -188,6 +195,7 @@ The PM escalates to Portfolio Manager within the stated response time when:
 |---|---|
 | Production outage, security incident, client threatening contract termination | 4 hours |
 | Budget variance >10% or >$25K; timeline at risk; client satisfaction issue; key team member departure | 24 hours |
+| Client 30+ days past due on any invoice, or scope expansion requested on an account with aged receivables | 24 hours |
 | Scope change request >10% of effort; resource addition needed | 3 business days |
 | Scope change <10%; minor process adjustment | Next scheduled check-in |
 

@@ -92,8 +92,9 @@ The five standards below answer one question: how do we deliver software for cli
 - "Can we just add…" gets a process, not a yes. Even small additions go through the memo. Pattern recognition matters.
 - Risks are surfaced with options, not as problems. Bring the trade-off, not the panic.
 - Distinguish between risk (known unknowns you can plan for) and ambiguity (unknown unknowns requiring exploratory action). They require different responses — don't treat them the same way.
+- When ambiguity is high, your accountability is to name it and sell the client on a discovery phase or technical spike — a short, time-boxed effort (typically 1–2 sprints) with a defined output and fixed cost — rather than committing to a fixed-price delivery you can't yet defend. A spike converts ambiguity into information. A fixed-price commitment on ambiguous scope converts ambiguity into margin risk.
 - Build schedule and budget contingency explicitly. Hidden padding is not a risk strategy; it just delays the conversation.
-- Run a pre-mortem at the start of every high-stakes phase. Ask: "if this phase fails, what killed it?" Surface assumptions before they become failures.
+- Run a pre-mortem before every high-stakes phase. Ask: "if this phase fails, what killed it?" Surface assumptions before they become failures. Required for all engagements >$100k — see Mandatory Gates below.
 
 **Examples:**
 
@@ -107,6 +108,7 @@ The five standards below answer one question: how do we deliver software for cli
 **What this looks like:**
 
 - Sprint planning, review, and retro happen on schedule. No exceptions.
+- The board is the source of truth. Engineers update their own tickets. The PM's job is to enforce the standard — not to be the data entry. A sprint board that only stays current because the PM is updating it isn't a board; it's the PM's opinion of the work.
 - Definition of Done is applied consistently. Code reviewed, tested, deployed, demoed, documented.
 - Margins reviewed monthly via ATP export and the KPI report. PM owns the conversation if a project is below margin target.
 - Engagements end cleanly. Final deliverable, retrospective, lessons learned in NOTES, formal handoff or closeout.
@@ -164,8 +166,33 @@ Don't wait for a weekly update. Send a Teams message within 24 hours when any of
 - Resource constraint will affect delivery (illness, departure, capacity)
 - Scope change request >10% of total effort
 - Trust event — a moment that could affect the client relationship, positive or negative
+- Client is 30+ days past due on any invoice — escalate before approving any scope expansion or renewal commitment
 
 **Format:** situation, impact, what you're doing about it, what you need from me.
+
+---
+
+## Mandatory Gates
+
+The following are not best practices — they are required steps. They apply automatically when the threshold is met. A PM cannot waive them; escalation to the Portfolio Manager is required if they cannot be completed before the gate deadline.
+
+### Pre-Mortem
+
+**Applies to:** All engagements with total contract value >$100k, and any engagement where a phase carries material delivery or client risk regardless of size.
+
+**When:** Before the start of any high-stakes phase (project kickoff, major release, go-live). Must be completed before the phase begins — not during it.
+
+**What it must produce:**
+
+- A written list of the top failure modes the team identified
+- Owner and mitigation assigned to each
+- Output filed in the project's NOTES before phase work starts
+
+**Format:** A facilitated session with the delivery team (1 hour). Prompt: "If this phase fails six months from now, what killed it?" Go around the room. Write everything down. Assign owners before you leave.
+
+**Who runs it:** The PM.
+
+**What disqualifies it:** A quick chat on a standup call. An async Slack thread. A list the PM wrote alone. The session requires the team's input — individual assumptions are the point.
 
 ---
 
