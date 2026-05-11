@@ -6,6 +6,7 @@ Welcome to the Condado team handbook. Use the navigation above or the links belo
 
 - [Mission & Values](company/values.md) — Who we are and what we stand for
 - [How We Work](company/how-we-work.md) — Our operating principles and team norms
+- [Project Manager Responsibilities](delivery/pm-responsibilities.md) — What the PM role owns, decides, and is measured on
 - [Project Lifecycle](delivery/project-lifecycle.md) — How we run projects from kickoff to close
 - [Status Reporting](delivery/status-reporting.md) — How we communicate project status
 - [Communication Standards](clients/communication.md) — How we communicate with clients

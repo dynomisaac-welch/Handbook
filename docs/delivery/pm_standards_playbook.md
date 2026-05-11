@@ -8,6 +8,10 @@
 
 ---
 
+**Related:** [PM Responsibilities](pm-responsibilities.md) — what the role owns, its boundaries, decision authority, and how performance is measured. This playbook covers the behavioral standards inside that role.
+
+---
+
 ## Why this exists
 
 Project managers are the operating system of every engagement. When Project Managers (PM) run well, clients feel confident, teams stay focused, and engagements stay healthy. When they don't, the symptoms show up everywhere: surprise status updates, missed risks, scattered information, scope creep, eroded margins.
